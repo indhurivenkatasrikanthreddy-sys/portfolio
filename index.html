@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I.V.Srikanth Reddy — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="overflow-x-hidden">
+
+  <!-- Toast -->
+  <div id="toast" class="toast">
+    <span id="toast-msg"></span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full z-50 pt-6 px-4">
+    <div class="max-w-[1600px] mx-auto">
+      <div class="flex items-center justify-between bg-surface/80 backdrop-blur-md rounded-full pt-3 pb-3 pl-6 pr-3 border border-border shadow-2xl shadow-black/50">
+        <a href="#hero" class="font-heading font-semibold text-lg text-txt tracking-tight">
+          I.V.Srikanth<span class="text-accent"></span>Reddy
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#about" class="text-sm font-medium text-muted hover:text-accent transition-colors">About</a>
+          <a href="#skills" class="text-sm font-medium text-muted hover:text-accent transition-colors">Skills</a>
+          <a href="#projects" class="text-sm font-medium text-muted hover:text-accent transition-colors">Projects</a>
+          <a href="#resume" class="text-sm font-medium text-muted hover:text-accent transition-colors">Resume</a>
+          <a href="#contact" class="text-sm font-medium text-muted hover:text-accent transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-accent text-base text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded-full hover:bg-txt transition-colors">
+            Hire Me
+          </a>
+          <button id="menu-toggle" class="md:hidden w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-all">
+            <span class="iconify" data-icon="mdi:menu" data-width="20"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-nav" class="mobile-nav fixed inset-0 z-[60] bg-base/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+    <button id="menu-close" class="absolute top-8 right-8 w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-all">
+      <span class="iconify" data-icon="mdi:close" data-width="20"></span>
+    </button>
+    <a href="#about" class="mobile-link text-2xl font-heading font-medium text-txt hover:text-accent transition-colors">About</a>
+    <a href="#skills" class="mobile-link text-2xl font-heading font-medium text-txt hover:text-accent transition-colors">Skills</a>
+    <a href="#projects" class="mobile-link text-2xl font-heading font-medium text-txt hover:text-accent transition-colors">Projects</a>
+    <a href="#resume" class="mobile-link text-2xl font-heading font-medium text-txt hover:text-accent transition-colors">Resume</a>
+    <a href="#contact" class="mobile-link text-2xl font-heading font-medium text-txt hover:text-accent transition-colors">Contact</a>
+    <a href="#contact" class="mt-4 inline-flex items-center gap-2 bg-accent text-base text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full">Hire Me</a>
+  </div>
+
+  <!-- Hero -->
+  <section id="hero" class="relative h-[50vh] sm:h-[60vh] md:h-[75vh] md:min-h-[600px] overflow-hidden flex items-end">
+    <div class="absolute inset-0 -z-10">
+      <div class="hero-scroll-track flex h-full" style="width: 300vw;">
+        <div class="relative h-full w-screen md:w-[60vw] flex-shrink-0 border-r border-border overflow-hidden">
+          <img src="https://picsum.photos/seed/fresher-hero1/1200/800.jpg" class="hero-img-float w-full h-full object-cover opacity-60" alt="" />
+        </div>
+        <div class="relative h-full w-screen md:w-[60vw] flex-shrink-0 border-r border-border overflow-hidden">
+          <img src="https://picsum.photos/seed/fresher-hero2/1200/800.jpg" class="hero-img-float w-full h-full object-cover opacity-60" style="animation-delay: -7s;" alt="" />
+        </div>
+        <div class="relative h-full w-screen md:w-[60vw] flex-shrink-0 border-r border-border overflow-hidden">
+          <img src="https://picsum.photos/seed/fresher-hero3/1200/800.jpg" class="hero-img-float w-full h-full object-cover opacity-60" style="animation-delay: -14s;" alt="" />
+        </div>
+        <div class="relative h-full w-screen md:w-[60vw] flex-shrink-0 border-r border-border overflow-hidden">
+          <img src="https://picsum.photos/seed/fresher-hero1/1200/800.jpg" class="hero-img-float w-full h-full object-cover opacity-60" alt="" />
+        </div>
+        <div class="relative h-full w-screen md:w-[60vw] flex-shrink-0 border-r border-border overflow-hidden">
+          <img src="https://picsum.photos/seed/fresher-hero2/1200/800.jpg" class="hero-img-float w-full h-full object-cover opacity-60" style="animation-delay: -7s;" alt="" />
+        </div>
+        <div class="relative h-full w-screen md:w-[60vw] flex-shrink-0 border-r border-border overflow-hidden">
+          <img src="https://picsum.photos/seed/fresher-hero3/1200/800.jpg" class="hero-img-float w-full h-full object-cover opacity-60" style="animation-delay: -14s;" alt="" />
+        </div>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-base via-base/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-base/80 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-[1600px] mx-auto w-full px-6 pb-12 md:pb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="w-2 h-2 rounded-full bg-accent pulse-dot"></span>
+        <span class="text-[10px] font-mono font-medium uppercase tracking-widest text-accent">Open to opportunities</span>
+      </div>
+      <h1 class="font-heading font-medium tracking-tight leading-[0.85] text-[14vw] md:text-[11vw] text-txt hero-heading">
+        I.V.Srikanth<br/>Reddy<span class="text-accent">.</span>
+      </h1>
+      <p class="mt-4 text-white text-sm md:text-base max-w-md leading-relaxed">
+        Fresher developer with a foundation in Python, C, and web technologies — eager to learn, build, and grow.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="#projects" class="hero-cta-btn inline-flex items-center gap-2 bg-accent text-base text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full hover:bg-yellow-400 transition-all">
+          <span class="iconify" data-icon="mdi:briefcase" data-width="16"></span>
+          View Projects
+        </a>
+        <a href="#contact" class="hero-cta-btn inline-flex items-center gap-2 border border-accent text-accent text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full hover:bg-accent/20 transition-all">
+          <span class="iconify" data-icon="mdi:email-outline" data-width="16"></span>
+          Contact Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 md:py-24">
+    <div class="max-w-[1550px] mx-auto px-6">
+      <div class="fade-up grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div class="lg:col-span-5">
+          <div class="relative overflow-hidden rounded-[2rem] border border-border aspect-[4/5]">
+            <img src="profile.jpeg" class="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-700" alt="I.V.Srikanth Reddy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-base/40 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 bg-surface/80 backdrop-blur-md rounded-2xl px-4 py-3 border border-border">
+              <p class="text-[10px] font-mono uppercase tracking-widest text-accent mb-1">Status</p>
+              <p class="font-heading font-medium text-xl text-txt">Fresher</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <span class="text-[10px] font-mono font-medium uppercase tracking-widest text-accent mb-4 block">01 — About Me</span>
+          <h2 class="font-heading font-medium text-3xl md:text-5xl tracking-tight leading-tight text-txt mb-6">
+            Just starting out,<br/>ready to grow<span class="text-accent">.</span>
+          </h2>
+          <div class="space-y-4 text-muted text-sm md:text-base leading-relaxed max-w-xl">
+            <p>
+              Hi! I'm a recent graduate passionate about programming and problem-solving. During my studies, I picked up Python and C as my core languages, and dove into web development with HTML, CSS, and JavaScript — building small projects along the way to put my learning into practice.
+            </p>
+            <p>
+              I may be a fresher, but I'm someone who learns fast, writes clean code, and genuinely enjoys turning ideas into working software. I'm actively looking for opportunities — internships, entry-level roles, or even freelance gigs — where I can contribute and keep growing every day.
+            </p>
+          </div>
+          <div class="grid grid-cols-3 gap-6 mt-10 pt-10 border-t border-border">
+            <div>
+              <p class="font-heading font-medium text-2xl md:text-3xl text-txt">3</p>
+              <p class="text-xs text-muted mt-1 uppercase tracking-wider">Projects</p>
+            </div>
+            <div>
+              <p class="font-heading font-medium text-2xl md:text-3xl text-txt">5</p>
+              <p class="text-xs text-muted mt-1 uppercase tracking-wider">Languages</p>
+            </div>
+            <div>
+              <p class="font-heading font-medium text-2xl md:text-3xl text-txt">&infin;</p>
+              <p class="text-xs text-muted mt-1 uppercase tracking-wider">Curiosity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 md:py-24 border-t border-border">
+    <div class="max-w-[1550px] mx-auto px-6">
+      <div class="fade-up">
+        <span class="text-[10px] font-mono font-medium uppercase tracking-widest text-accent mb-4 block">02 — Skills & Tools</span>
+        <h2 class="font-heading font-medium text-3xl md:text-5xl tracking-tight leading-tight text-txt mb-16">
+          What I know<br/>so far<span class="text-accent">.</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Python -->
+        <div class="fade-up group bg-surface rounded-[2rem] p-8 border border-border hover:border-accent/30 transition-all duration-500">
+          <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+            <span class="iconify text-accent" data-icon="mdi:language-python" data-width="28"></span>
+          </div>
+          <h3 class="font-heading font-medium text-xl tracking-tight text-txt mb-3">Python</h3>
+          <p class="text-sm text-muted leading-relaxed mb-6">My primary language — comfortable with logic building, data structures, file handling, and basic automation scripts.</p>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span class="text-muted">Core Python</span><span class="text-accent">75%</span></div>
+              <div class="h-1.5 rounded-full bg-border overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-accent" data-width="75"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span class="text-muted">Problem Solving</span><span class="text-accent">70%</span></div>
+              <div class="h-1.5 rounded-full bg-border overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-accent" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- C -->
+        <div class="fade-up group bg-surface rounded-[2rem] p-8 border border-border hover:border-accent/30 transition-all duration-500" style="transition-delay: 0.1s;">
+          <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+            <span class="iconify text-accent" data-icon="mdi:language-c" data-width="28"></span>
+          </div>
+          <h3 class="font-heading font-medium text-xl tracking-tight text-txt mb-3">C Programming</h3>
+          <p class="text-sm text-muted leading-relaxed mb-6">Solid understanding of pointers, memory management, structures, and algorithm implementation from coursework.</p>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span class="text-muted">Syntax & Logic</span><span class="text-accent">68%</span></div>
+              <div class="h-1.5 rounded-full bg-border overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-accent" data-width="68"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span class="text-muted">Pointers & Memory</span><span class="text-accent">60%</span></div>
+              <div class="h-1.5 rounded-full bg-border overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-accent" data-width="60"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HTML -->
+        <div class="fade-up group bg-surface rounded-[2rem] p-8 border border-border hover:border-accent/30 transition-all duration-500" style="transition-delay: 0.2s;">
+          <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+            <span class="iconify text-accent" data-icon="mdi:language-html5" data-width="28"></span>
+          </div>
+          <h3 class="font-heading font-medium text-xl tracking-tight text-txt mb-3">HTML</h3>
+          <p class="text-sm text-muted leading-relaxed mb-6">Strong grasp of semantic markup, forms, tables, accessibility basics, and structuring web pages properly.</p>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span class="text-muted">Semantic HTML</span><span class="text-accent">85%</span></div>
+              <div class="h-1.5 rounded-full bg-border overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-accent" data-width="85"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span class="text-muted">Forms & Tables</span><span class="text-accent">80%</span></div>
+              <div class="h-1.5 rounded-full bg-border overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-accent" data-width="80"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CSS -->
+        <div class="fade-up group bg-surface rounded-[2rem] p-8 border border-border hover:border-accent/30 transition-all duration-500">
+          <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+            <span class="iconify text-accent" data-icon="mdi:language-css3" data-width="28"></span>
+          </div>
+          <h3 class="font-heading font-medium text-xl tracking-tight text-txt mb-3">CSS</h3>
+          <p class="text-sm text-muted leading-relaxed mb-6">Can build responsive layouts with Flexbox and Grid, style components, add transitions, and work with media queries.</p>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span class="text-muted">Flexbox & Grid</span><span class="text-accent">78%</span></div>
+              <div class="h-1.5 rounded-full bg-border overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-accent" data-width="78"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span class="text-muted">Responsive Design</span><span class="text-accent">72%</span></div>
+              <div class="h-1.5 rounded-full bg-border overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-accent" data-width="72"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="fade-up group bg-surface rounded-[2rem] p-8 border border-border hover:border-accent/30 transition-all duration-500" style="transition-delay: 0.1s;">
+          <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+            <span class="iconify text-accent" data-icon="mdi:language-javascript" data-width="28"></span>
+          </div>
+          <h3 class="font-heading font-medium text-xl tracking-tight text-txt mb-3">JavaScript</h3>
+          <p class="text-sm text-muted leading-relaxed mb-6">Learning DOM manipulation, event handling, functions, and building interactive features for the web.</p>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span class="text-muted">DOM & Events</span><span class="text-accent">65%</span></div>
+              <div class="h-1.5 rounded-full bg-border overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-accent" data-width="65"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span class="text-muted">Core Logic</span><span class="text-accent">62%</span></div>
+              <div class="h-1.5 rounded-full bg-border overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-accent" data-width="62"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="fade-up group bg-surface rounded-[2rem] p-8 border border-border hover:border-accent/30 transition-all duration-500" style="transition-delay: 0.2s;">
+          <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+            <span class="iconify text-accent" data-icon="mdi:wrench-outline" data-width="28"></span>
+          </div>
+          <h3 class="font-heading font-medium text-xl tracking-tight text-txt mb-3">Tools & Other</h3>
+          <p class="text-sm text-muted leading-relaxed mb-6">Familiar with VS Code, Git basics, command line, and always exploring new tools to improve my workflow.</p>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span class="text-muted">VS Code / Git</span><span class="text-accent">60%</span></div>
+              <div class="h-1.5 rounded-full bg-border overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-accent" data-width="60"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span class="text-muted">Command Line</span><span class="text-accent">55%</span></div>
+              <div class="h-1.5 rounded-full bg-border overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-accent" data-width="55"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 md:py-24 border-t border-border">
+    <div class="max-w-[1550px] mx-auto px-6">
+      <div class="fade-up">
+        <span class="text-[10px] font-mono font-medium uppercase tracking-widest text-accent mb-4 block">03 — My Projects</span>
+        <h2 class="font-heading font-medium text-3xl md:text-5xl tracking-tight leading-tight text-txt mb-16">
+          Things I've<br/>built so far<span class="text-accent">.</span>
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Project 1 — SmartID -->
+        <div class="fade-up project-card group relative overflow-hidden rounded-[2rem] border border-border cursor-pointer aspect-[16/9] md:aspect-[21/9]">
+          <img src="smartid.jpeg" class="project-img absolute inset-0 w-full h-full object-cover opacity-60 transition-all duration-700" alt="SmartID System" />
+          <div class="absolute inset-0 bg-gradient-to-t from-base via-base/50 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-base/70 to-transparent"></div>
+          <div class="project-overlay absolute inset-0 bg-accent/10 opacity-0 transition-opacity duration-500"></div>
+          <div class="absolute top-6 left-6 flex flex-wrap gap-2">
+            <span class="bg-surface/80 backdrop-blur text-[10px] font-mono uppercase tracking-widest text-accent px-3 py-1.5 rounded-full border border-border">Python</span>
+            <span class="bg-surface/80 backdrop-blur text-[10px] font-mono uppercase tracking-widest text-accent px-3 py-1.5 rounded-full border border-border">C</span>
+            <span class="bg-surface/80 backdrop-blur text-[10px] font-mono uppercase tracking-widest text-accent px-3 py-1.5 rounded-full border border-border">File I/O</span>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-8 md:p-10">
+            <p class="project-text text-[10px] font-mono uppercase tracking-widest text-accent mb-2 transform translate-y-4 opacity-0 transition-all duration-500">Academic Project</p>
+            <h3 class="font-heading font-medium text-2xl md:text-4xl tracking-tight text-txt mb-2">SmartID — ID Reissue System</h3>
+            <p class="project-text text-sm text-muted max-w-2xl transform translate-y-4 opacity-0 transition-all duration-500 delay-75">
+              A console-based system for handling ID card reissue requests. Users can submit applications, track status, and administrators can approve or reject requests. Built with Python for the logic layer and C for low-level file operations — storing and retrieving records efficiently using structured file handling.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 2 & 3 side by side -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- To Do List -->
+          <div class="fade-up project-card group relative overflow-hidden rounded-[2rem] border border-border cursor-pointer aspect-[4/5]">
+            <img src="https://picsum.photos/seed/todo-list-app/800/1000.jpg" class="project-img absolute inset-0 w-full h-full object-cover opacity-60 transition-all duration-700" alt="To Do List" />
+            <div class="absolute inset-0 bg-gradient-to-t from-base via-base/30 to-transparent"></div>
+            <div class="project-overlay absolute inset-0 bg-accent/10 opacity-0 transition-opacity duration-500"></div>
+            <div class="absolute top-6 left-6 flex flex-wrap gap-2">
+              <span class="bg-surface/80 backdrop-blur text-[10px] font-mono uppercase tracking-widest text-accent px-3 py-1.5 rounded-full border border-border">HTML</span>
+              <span class="bg-surface/80 backdrop-blur text-[10px] font-mono uppercase tracking-widest text-accent px-3 py-1.5 rounded-full border border-border">CSS</span>
+              <span class="bg-surface/80 backdrop-blur text-[10px] font-mono uppercase tracking-widest text-accent px-3 py-1.5 rounded-full border border-border">JavaScript</span>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-8">
+              <p class="project-text text-[10px] font-mono uppercase tracking-widest text-accent mb-2 transform translate-y-4 opacity-0 transition-all duration-500">Web App</p>
+              <h3 class="font-heading font-medium text-xl md:text-2xl tracking-tight text-txt mb-2">To Do List App</h3>
+              <p class="project-text text-sm text-muted transform translate-y-4 opacity-0 transition-all duration-500 delay-75">
+                A clean, responsive task manager where users can add, mark complete, edit, and delete tasks. Data persists using localStorage so tasks survive page refreshes. Styled with custom CSS — no frameworks, just vanilla everything.
+              </p>
+            </div>
+          </div>
+
+          <!-- Rock Paper Scissors -->
+          <div class="fade-up project-card group relative overflow-hidden rounded-[2rem] border border-border cursor-pointer aspect-[4/5]">
+            <img src="https://picsum.photos/seed/rock-paper-scissors/800/1000.jpg" class="project-img absolute inset-0 w-full h-full object-cover opacity-60 transition-all duration-700" alt="Rock Paper Scissors" />
+            <div class="absolute inset-0 bg-gradient-to-t from-base via-base/30 to-transparent"></div>
+            <div class="project-overlay absolute inset-0 bg-accent/10 opacity-0 transition-opacity duration-500"></div>
+            <div class="absolute top-6 left-6 flex flex-wrap gap-2">
+              <span class="bg-surface/80 backdrop-blur text-[10px] font-mono uppercase tracking-widest text-accent px-3 py-1.5 rounded-full border border-border">HTML</span>
+              <span class="bg-surface/80 backdrop-blur text-[10px] font-mono uppercase tracking-widest text-accent px-3 py-1.5 rounded-full border border-border">CSS</span>
+              <span class="bg-surface/80 backdrop-blur text-[10px] font-mono uppercase tracking-widest text-accent px-3 py-1.5 rounded-full border border-border">JavaScript</span>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-8">
+              <p class="project-text text-[10px] font-mono uppercase tracking-widest text-accent mb-2 transform translate-y-4 opacity-0 transition-all duration-500">Browser Game</p>
+              <h3 class="font-heading font-medium text-xl md:text-2xl tracking-tight text-txt mb-2">Rock Paper Scissors</h3>
+              <p class="project-text text-sm text-muted transform translate-y-4 opacity-0 transition-all duration-500 delay-75">
+                A fun browser game against the computer with score tracking, animated choices, visual result feedback, and a clean game UI. My first hands-on project with JavaScript DOM manipulation and event listeners — simple but satisfying to build.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" class="py-20 md:py-24 border-t border-border">
+    <div class="max-w-[1550px] mx-auto px-6">
+      <div class="fade-up relative overflow-hidden rounded-[2.5rem] border border-border">
+        <div class="absolute inset-0">
+          <img src="https://picsum.photos/seed/fresher-resume-bg/1600/600.jpg" class="w-full h-full object-cover opacity-20" alt="" />
+          <div class="absolute inset-0 bg-gradient-to-r from-base via-base/90 to-base/70"></div>
+        </div>
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10 p-10 md:p-16">
+          <div class="max-w-lg">
+            <span class="text-[10px] font-mono font-medium uppercase tracking-widest text-accent mb-4 block">04 — Resume</span>
+            <h2 class="font-heading font-medium text-3xl md:text-5xl tracking-tight leading-tight text-txt mb-4">
+              Take a look at<br/>my resume<span class="text-accent">.</span>
+            </h2>
+            <p class="text-muted text-sm md:text-base leading-relaxed">
+              It includes my education, the skills I've picked up, my academic projects, and any certifications. A work in progress — just like me!
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button onclick="downloadResume()" class="inline-flex items-center gap-3 bg-accent text-base text-xs font-bold uppercase tracking-widest px-8 py-4 rounded-full hover:bg-txt transition-colors">
+              <span class="iconify" data-icon="mdi:download" data-width="18"></span>
+              Download PDF
+            </button>
+            <button onclick="viewResume()" class="inline-flex items-center gap-3 bg-txt/10 text-txt text-xs font-bold uppercase tracking-widest px-8 py-4 rounded-full border border-border hover:border-accent hover:text-accent transition-all">
+              <span class="iconify" data-icon="mdi:open-in-new" data-width="18"></span>
+              View Online
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 md:py-24 border-t border-border">
+    <div class="max-w-[1550px] mx-auto px-6">
+      <div class="fade-up grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <span class="text-[10px] font-mono font-medium uppercase tracking-widest text-accent mb-4 block">05 — Get In Touch</span>
+          <h2 class="font-heading font-medium text-3xl md:text-5xl tracking-tight leading-tight text-txt mb-6">
+            Let's connect<span class="text-accent">.</span>
+          </h2>
+          <p class="text-muted text-sm md:text-base leading-relaxed mb-10 max-w-md">
+            Looking for an intern, junior developer, or just someone enthusiastic to join your team? I'd love to hear from you — even if it's just to say hi.
+          </p>
+
+          <div class="space-y-4">
+            <a href="mailto:alex@morgan.dev" class="group flex items-center gap-4 bg-surface rounded-2xl p-5 border border-border hover:border-accent/30 transition-all duration-300">
+              <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <span class="iconify text-accent" data-icon="mdi:email-outline" data-width="22"></span>
+              </div>
+              <div>
+                <p class="text-[10px] font-mono uppercase tracking-widest text-faint mb-0.5">Email</p>
+                <p class="text-sm font-medium text-txt group-hover:text-accent transition-colors">alex@morgan.dev</p>
+              </div>
+              <span class="iconify ml-auto text-faint group-hover:text-accent transition-colors" data-icon="mdi:arrow-right" data-width="18"></span>
+            </a>
+            <a href="tel:+14155550132" class="group flex items-center gap-4 bg-surface rounded-2xl p-5 border border-border hover:border-accent/30 transition-all duration-300">
+              <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <span class="iconify text-accent" data-icon="mdi:phone-outline" data-width="22"></span>
+              </div>
+              <div>
+                <p class="text-[10px] font-mono uppercase tracking-widest text-faint mb-0.5">Phone</p>
+                <p class="text-sm font-medium text-txt group-hover:text-accent transition-colors">+1 (415) 555-0132</p>
+              </div>
+              <span class="iconify ml-auto text-faint group-hover:text-accent transition-colors" data-icon="mdi:arrow-right" data-width="18"></span>
+            </a>
+            <div class="group flex items-center gap-4 bg-surface rounded-2xl p-5 border border-border">
+              <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
+                <span class="iconify text-accent" data-icon="mdi:map-marker-outline" data-width="22"></span>
+              </div>
+              <div>
+                <p class="text-[10px] font-mono uppercase tracking-widest text-faint mb-0.5">Location</p>
+                <p class="text-sm font-medium text-txt">San Francisco, CA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-surface rounded-[2rem] p-8 md:p-10 border border-border">
+          <h3 class="font-heading font-medium text-xl tracking-tight text-txt mb-6">Send a message</h3>
+          <form id="contact-form" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="text-[10px] font-mono uppercase tracking-widest text-faint mb-2 block">Name</label>
+                <input type="text" name="name" required placeholder="Your name" class="w-full bg-base border border-border rounded-xl px-4 py-3 text-sm text-txt placeholder:text-faint focus:outline-none focus:border-accent transition-colors" />
+              </div>
+              <div>
+                <label class="text-[10px] font-mono uppercase tracking-widest text-faint mb-2 block">Email</label>
+                <input type="email" name="email" required placeholder="you@email.com" class="w-full bg-base border border-border rounded-xl px-4 py-3 text-sm text-txt placeholder:text-faint focus:outline-none focus:border-accent transition-colors" />
+              </div>
+            </div>
+            <div>
+              <label class="text-[10px] font-mono uppercase tracking-widest text-faint mb-2 block">Subject</label>
+              <input type="text" name="subject" placeholder="Internship / Freelance / Hello" class="w-full bg-base border border-border rounded-xl px-4 py-3 text-sm text-txt placeholder:text-faint focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label class="text-[10px] font-mono uppercase tracking-widest text-faint mb-2 block">Message</label>
+              <textarea name="message" required rows="5" placeholder="Hi Alex, I came across your portfolio and..." class="w-full bg-base border border-border rounded-xl px-4 py-3 text-sm text-txt placeholder:text-faint focus:outline-none focus:border-accent transition-colors resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-accent text-base text-xs font-bold uppercase tracking-widest px-6 py-4 rounded-full hover:bg-txt transition-colors">
+              <span class="iconify" data-icon="mdi:send" data-width="16"></span>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-border py-12 md:py-16">
+    <div class="max-w-[1550px] mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 mb-12">
+        <div class="md:col-span-5">
+          <a href="#hero" class="font-heading font-semibold text-2xl text-txt tracking-tight">
+            Alex<span class="text-accent">.</span>Morgan
+          </a>
+          <p class="text-muted text-sm leading-relaxed mt-4 max-w-sm">
+            Fresher developer with a passion for clean code and continuous learning. Based in San Francisco.
+          </p>
+          <div class="flex gap-3 mt-6">
+            <a href="#" class="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-all">
+              <span class="iconify" data-icon="mdi:github" data-width="18"></span>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-all">
+              <span class="iconify" data-icon="mdi:linkedin" data-width="18"></span>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-all">
+              <span class="iconify" data-icon="mdi:twitter" data-width="18"></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-[10px] font-mono font-medium uppercase tracking-widest text-faint mb-4">Navigation</h4>
+          <ul class="space-y-3">
+            <li><a href="#about" class="text-sm text-muted hover:text-accent transition-colors">About</a></li>
+            <li><a href="#skills" class="text-sm text-muted hover:text-accent transition-colors">Skills</a></li>
+            <li><a href="#projects" class="text-sm text-muted hover:text-accent transition-colors">Projects</a></li>
+            <li><a href="#resume" class="text-sm text-muted hover:text-accent transition-colors">Resume</a></li>
+            <li><a href="#contact" class="text-sm text-muted hover:text-accent transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-[10px] font-mono font-medium uppercase tracking-widest text-faint mb-4">Skills</h4>
+          <ul class="space-y-3">
+            <li><span class="text-sm text-muted">Python</span></li>
+            <li><span class="text-sm text-muted">C</span></li>
+            <li><span class="text-sm text-muted">HTML / CSS</span></li>
+            <li><span class="text-sm text-muted">JavaScript</span></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-[10px] font-mono font-medium uppercase tracking-widest text-faint mb-4">Contact</h4>
+          <ul class="space-y-3">
+            <li><a href="mailto:alex@morgan.dev" class="text-sm text-muted hover:text-accent transition-colors">alex@morgan.dev</a></li>
+            <li><a href="tel:+14155550132" class="text-sm text-muted hover:text-accent transition-colors">+1 (415) 555-0132</a></li>
+            <li><span class="text-sm text-muted">San Francisco, CA</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-border gap-4">
+        <p class="text-xs text-faint">
+          © <span id="year"></span> Alex Morgan. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <a href="#" class="text-xs text-faint hover:text-accent transition-colors">Privacy Policy</a>
+          <a href="#" class="text-xs text-faint hover:text-accent transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
